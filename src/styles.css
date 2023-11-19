@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+.is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.breed-select {
+    display: flex;
+    max-width: 300px;
+    margin: auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border: 1px solid #f8fafc;
+}
+
+h1 {
+    margin: 0;
+}
+
+.loader {
+    font-size: 0;
+    position: relative;
+    margin: 20% auto;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: currentColor;
+    top: -34px;
+    animation: animloader108s 20s linear infinite; 
+} 
+
+@keyframes animloader108s {
+0% {  box-shadow: 0 0 0 -2px , 0 0 0 -2px , 0 0 0 -5px , 0 0 0 -5px }
+20% {  box-shadow: 40px 2px 0 -2px  , 0 0 0 -2px , 40px 2px 0 -5px , 0 0 0 -5px }
+40% {  box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 40px 2px 0 -5px , -40px 2px 0 -5px }
+60% {  box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 23px -23px 0 -5px , -40px 2px 0 -5px }
+80%, 95% {  box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 23px -23px 0 -5px , -23px -23px 0 -5px }
+100% {  box-shadow: 40px 2px 0 -2px  rgba($lite, 0), -40px 2px 0 -2px rgba($lite, 0), 23px -23px 0 -5px rgba($lite, 0), -23px -23px 0 -5px rgba($lite, 0)}
+}
+
+
+.cat-info {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: rgb(247, 244, 181);
+    border: 1px solid #0d161b;
+    color: rgb(6, 39, 39);
+}
+
+.box-img {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+}
+
